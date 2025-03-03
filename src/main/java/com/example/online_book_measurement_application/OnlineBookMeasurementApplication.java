@@ -2,6 +2,8 @@ package com.example.online_book_measurement_application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class OnlineBookMeasurementApplication {
@@ -10,4 +12,8 @@ public class OnlineBookMeasurementApplication {
         SpringApplication.run(OnlineBookMeasurementApplication.class, args);
     }
 
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 }
